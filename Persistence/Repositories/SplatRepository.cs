@@ -49,4 +49,9 @@ public sealed class SplatRepository : ISplatsRepository
         _context.Splats.Remove(splat);
         return _context.SaveChangesAsync(ct);
     }
+
+    public Task<bool> ExistsAsync(int id, CancellationToken ct)
+    {
+        return _context.Splats.AnyAsync(s => s.Id == id, ct);
+    }
 }

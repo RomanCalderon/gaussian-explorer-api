@@ -7,4 +7,5 @@ public interface ISplatsRepository
     Task AddAsync(Splat splat, CancellationToken ct);
     Task UpdateAsync(Splat splat, CancellationToken ct);
     Task RemoveAsync(Splat splat, CancellationToken ct);
+    Task<bool> ExistsAsync(int id, CancellationToken ct);
 }

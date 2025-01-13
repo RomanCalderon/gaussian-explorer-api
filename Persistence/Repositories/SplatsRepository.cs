@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Persistence.Repositories;
 
-public sealed class SplatRepository : ISplatsRepository
+public sealed class SplatsRepository : ISplatsRepository
 {
     private readonly ApplicationDbContext _context;
 
-    public SplatRepository(ApplicationDbContext context)
+    public SplatsRepository(ApplicationDbContext context)
     {
         _context = context;
     }

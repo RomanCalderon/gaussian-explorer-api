@@ -13,7 +13,8 @@ builder.Services
     .AddCorsPolicy(builder.Configuration)
     .AddEndpoints()
     .AddPersistence(builder.Environment, builder.Configuration)
-    .AddPostsService();
+    .AddPostsService()
+    .AddSplatsService();
 
 var app = builder.Build();
 

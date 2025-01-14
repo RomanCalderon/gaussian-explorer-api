@@ -1,12 +1,9 @@
-﻿namespace Domain.Splats;
+﻿namespace GaussianExplorer.Domain.Splats.Requests;
 
-public sealed class Splat
+public sealed class UpdateSplatRequest
 {
-    public int Id { get; set; }
-    public int UserId { get; set; }
     public string? Title { get; set; }
     public string? Description { get; set; }
     public string? Url { get; set; }
     public string? ViewInfo { get; set; }
-    public DateTime CreatedAt { get; set; }
 }

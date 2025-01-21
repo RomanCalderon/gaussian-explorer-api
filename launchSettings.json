@@ -4,7 +4,8 @@
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
       "serviceActions": {
-        "gaussianexplorer.api": "StartDebugging"
+        "gaussianexplorer.api": "StartDebugging",
+        "sqlserver": "StartWithoutDebugging"
       }
     }
   }

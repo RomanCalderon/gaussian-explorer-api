@@ -1,6 +1,7 @@
 using FastEndpoints;
 using FastEndpoints.Swagger;
 using GaussianExplorer.API;
+using GaussianExplorer.API.Extensions;
 using GaussianExplorer.API.RequestPipeline;
 using Serilog;
 
@@ -17,6 +18,8 @@ builder.Services
     .AddSplatsService();
 
 var app = builder.Build();
+
+await app.InitializeDatabaseAsync(app.Environment);
 
 app.UseGlobalErrorHandling();
 app.UseCors("default");

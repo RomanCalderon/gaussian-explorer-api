@@ -10,6 +10,7 @@ services:
       start_period: 10s
 
   gaussianexplorer.api:
+    image: romanc647/gaussianexplorerapi:dev
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:

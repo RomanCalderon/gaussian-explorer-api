@@ -1,11 +1,14 @@
-﻿using FastEndpoints;
+﻿using Domain.Splats;
+using FastEndpoints;
 using FastEndpoints.Swagger;
 using GaussianExplorer.API.Posts;
+using GaussianExplorer.API.Splats;
 using GaussianExplorer.Domain.Posts;
 using GaussianExplorer.Persistence.Data;
 using GaussianExplorer.Persistence.Posts;
 using GaussianExplorer.Persistence.Utility;
 using Microsoft.EntityFrameworkCore;
+using Persistence.Repositories;
 
 namespace GaussianExplorer.API;
 
@@ -81,6 +84,14 @@ public static class DependencyInjection
     {
         services.AddScoped<IPostsRepository, PostsRepository>();
         services.AddScoped<IPostsService, PostsService>();
+
+        return services;
+    }
+
+    public static IServiceCollection AddSplatsService(this IServiceCollection services)
+    {
+        services.AddScoped<ISplatsRepository, SplatsRepository>();
+        services.AddScoped<ISplatsService, SplatsService>();
 
         return services;
     }

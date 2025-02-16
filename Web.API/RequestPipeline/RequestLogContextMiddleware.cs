@@ -1,6 +1,6 @@
 ﻿using Serilog.Context;
 
-namespace GaussianExplorer.API.RequestPipeline;
+namespace API.RequestPipeline;
 
 public class RequestLogContextMiddleware
 {

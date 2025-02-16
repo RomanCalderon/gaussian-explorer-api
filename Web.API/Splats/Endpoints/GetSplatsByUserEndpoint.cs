@@ -1,7 +1,8 @@
 ﻿using Domain.Splats;
 using FastEndpoints;
+using API.Splats.Errors;
 
-namespace GaussianExplorer.API.Splats.Endpoints;
+namespace API.Splats.Endpoints;
 
 public class GetSplatsByUserEndpoint : EndpointWithoutRequest
 {

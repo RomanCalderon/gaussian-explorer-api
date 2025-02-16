@@ -1,6 +1,6 @@
-using GaussianExplorer.Persistence.Utility;
+using Persistence.Utility;
 
-namespace GaussianExplorer.API.Extensions
+namespace API.Extensions
 {
     public static class ApplicationBuilderExtensions
     {

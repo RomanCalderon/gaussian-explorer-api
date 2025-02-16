@@ -1,12 +1,12 @@
 ﻿using FastEndpoints;
 using FluentValidation;
-using GaussianExplorer.Domain.Splats.Requests;
+using Domain.Splats.Requests;
 
-namespace GaussianExplorer.API.Splats.Endpoints;
+namespace API.Splats.Endpoints;
 
-public class UpdateSplatEndpoint : Validator<UpdateSplatRequest>
+public class UpdateSplatValidator : Validator<UpdateSplatRequest>
 {
-    public UpdateSplatEndpoint()
+    public UpdateSplatValidator()
     {
         RuleFor(x => x.Title)
             .NotEmpty()

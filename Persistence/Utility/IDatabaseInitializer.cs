@@ -1,4 +1,4 @@
-namespace GaussianExplorer.Persistence.Utility;
+namespace Persistence.Utility;
 
 public interface IDatabaseInitializer
 {

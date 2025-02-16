@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace GaussianExplorer.Persistence.Migrations
+namespace Persistence.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

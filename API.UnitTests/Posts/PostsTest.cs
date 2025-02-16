@@ -1,9 +1,9 @@
 ﻿using API.UnitTests.Common;
 using API.UnitTests.Posts.Fixtures;
-using GaussianExplorer.API.Posts;
-using GaussianExplorer.Domain.Abstractions;
-using GaussianExplorer.Domain.Posts;
-using GaussianExplorer.Domain.Posts.Requests;
+using API.Posts;
+using Domain.Abstractions;
+using Domain.Posts;
+using Domain.Posts.Requests;
 using Moq;
 
 namespace API.UnitTests.Posts;

@@ -1,8 +1,8 @@
 ﻿using FastEndpoints;
-using GaussianExplorer.Domain.Abstractions;
-using GaussianExplorer.Domain.Posts;
+using Domain.Abstractions;
+using Domain.Posts;
 
-namespace GaussianExplorer.API.Posts.Endpoints;
+namespace API.Posts.Endpoints;
 
 public class GetPostsEndpoint : EndpointWithoutRequest
 {

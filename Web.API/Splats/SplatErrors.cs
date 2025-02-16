@@ -1,6 +1,6 @@
-﻿using GaussianExplorer.Domain.Abstractions;
+﻿using Domain.Abstractions;
 
-namespace GaussianExplorer.API.Splats;
+namespace API.Splats.Errors;
 
 public class SplatErrors
 {

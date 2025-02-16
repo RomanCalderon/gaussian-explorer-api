@@ -1,8 +1,8 @@
 using FastEndpoints;
 using FastEndpoints.Swagger;
-using GaussianExplorer.API;
-using GaussianExplorer.API.Extensions;
-using GaussianExplorer.API.RequestPipeline;
+using API;
+using API.Extensions;
+using API.RequestPipeline;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,16 +1,16 @@
 ﻿using Domain.Splats;
 using FastEndpoints;
 using FastEndpoints.Swagger;
-using GaussianExplorer.API.Posts;
-using GaussianExplorer.API.Splats;
-using GaussianExplorer.Domain.Posts;
-using GaussianExplorer.Persistence.Data;
-using GaussianExplorer.Persistence.Posts;
-using GaussianExplorer.Persistence.Utility;
+using API.Posts;
+using API.Splats;
+using Domain.Posts;
+using Persistence.Data;
+using Persistence.Posts;
+using Persistence.Utility;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Repositories;
 
-namespace GaussianExplorer.API;
+namespace API;
 
 public static class DependencyInjection
 {

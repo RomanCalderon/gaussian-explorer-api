@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Diagnostics;
 
-namespace GaussianExplorer.API.RequestPipeline;
+namespace API.RequestPipeline;
 
 public static class WebApplicationExtensions
 {

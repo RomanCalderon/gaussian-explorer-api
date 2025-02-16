@@ -1,8 +1,8 @@
-﻿using GaussianExplorer.Domain.Posts;
-using GaussianExplorer.Persistence.Data;
+﻿using Domain.Posts;
+using Persistence.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace GaussianExplorer.Persistence.Posts;
+namespace Persistence.Posts;
 
 public sealed class PostsRepository : IPostsRepository
 {

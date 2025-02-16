@@ -2,7 +2,7 @@
 using Domain.Splats.Requests;
 using FastEndpoints;
 
-namespace GaussianExplorer.API.Splats.Endpoints;
+namespace API.Splats.Endpoints;
 
 public class CreateSplatEndpoint : Endpoint<CreateSplatRequest>
 {

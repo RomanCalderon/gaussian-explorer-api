@@ -1,8 +1,8 @@
 ﻿using FastEndpoints;
-using GaussianExplorer.Domain.Posts;
-using GaussianExplorer.Domain.Posts.Requests;
+using Domain.Posts;
+using Domain.Posts.Requests;
 
-namespace GaussianExplorer.API.Posts.Endpoints;
+namespace API.Posts.Endpoints;
 
 public class CreatePostEndpoint : Endpoint<CreatePostRequest>
 {

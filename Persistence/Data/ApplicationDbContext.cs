@@ -1,8 +1,8 @@
-﻿using Domain.Splats;
-using GaussianExplorer.Domain.Posts;
+﻿using Domain.Posts;
+using Domain.Splats;
 using Microsoft.EntityFrameworkCore;
 
-namespace GaussianExplorer.Persistence.Data;
+namespace Persistence.Data;
 
 public class ApplicationDbContext : DbContext
 {

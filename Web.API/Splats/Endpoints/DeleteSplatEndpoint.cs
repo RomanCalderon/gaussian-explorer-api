@@ -1,8 +1,8 @@
 ﻿using Domain.Splats;
 using FastEndpoints;
-using GaussianExplorer.API.Splats;
+using API.Splats.Errors;
 
-namespace Web.API.Splats.Endpoints;
+namespace API.Splats.Endpoints;
 
 public class DeleteSplatEndpoint : EndpointWithoutRequest
 {

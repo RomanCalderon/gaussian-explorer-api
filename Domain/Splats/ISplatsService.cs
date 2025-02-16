@@ -1,5 +1,5 @@
-﻿using GaussianExplorer.Domain.Abstractions;
-using GaussianExplorer.Domain.Splats.Requests;
+﻿using Domain.Abstractions;
+using Domain.Splats.Requests;
 
 namespace Domain.Splats;
 

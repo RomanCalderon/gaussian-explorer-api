@@ -1,7 +1,7 @@
 ﻿using API.UnitTests.Common;
-using GaussianExplorer.API.Posts;
-using GaussianExplorer.Domain.Abstractions;
-using GaussianExplorer.Domain.Posts;
+using API.Posts;
+using Domain.Abstractions;
+using Domain.Posts;
 using System.Collections;
 
 namespace API.UnitTests.Posts.Fixtures;

@@ -1,4 +1,4 @@
-﻿using GaussianExplorer.Domain.Posts;
+﻿using Domain.Posts;
 
 namespace API.UnitTests.Posts.Fixtures;
 internal static class TestDataGenerator

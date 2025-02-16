@@ -1,9 +1,8 @@
-
-using GaussianExplorer.Persistence.Data;
 using Microsoft.EntityFrameworkCore;
+using Persistence.Data;
 using Microsoft.Extensions.Logging;
 
-namespace GaussianExplorer.Persistence.Utility;
+namespace Persistence.Utility;
 
 public class DatabaseInitializer : IDatabaseInitializer
 {

@@ -1,8 +1,8 @@
-﻿using GaussianExplorer.Domain.Abstractions;
-using GaussianExplorer.Domain.Posts;
-using GaussianExplorer.Domain.Posts.Requests;
+﻿using Domain.Abstractions;
+using Domain.Posts;
+using Domain.Posts.Requests;
 
-namespace GaussianExplorer.API.Posts;
+namespace API.Posts;
 
 public class PostsService : IPostsService
 {

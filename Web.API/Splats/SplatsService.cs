@@ -55,10 +55,10 @@ public sealed class SplatsService : ISplatsService
         {
             Id = id,
             UserId = splat.UserId,
-            Title = request.Title,
-            Description = request.Description,
-            Url = request.Url,
-            ViewInfo = request.ViewInfo,
+            Title = request.Title ?? splat.Title,
+            Description = request.Description ?? splat.Description,
+            Url = request.Url ?? splat.Url,
+            ViewInfo = request.ViewInfo ?? splat.ViewInfo,
             CreatedAt = splat.CreatedAt
         };
 

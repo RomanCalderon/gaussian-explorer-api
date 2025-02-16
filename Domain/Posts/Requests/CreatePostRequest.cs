@@ -1,4 +1,4 @@
-﻿namespace GaussianExplorer.Domain.Posts.Requests;
+﻿namespace Domain.Posts.Requests;
 
 public sealed class CreatePostRequest
 {

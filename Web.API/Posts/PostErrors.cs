@@ -1,6 +1,6 @@
-﻿using GaussianExplorer.Domain.Abstractions;
+﻿using Domain.Abstractions;
 
-namespace GaussianExplorer.API.Posts;
+namespace API.Posts;
 
 public class PostErrors
 {

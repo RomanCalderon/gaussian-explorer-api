@@ -1,5 +1,5 @@
 ﻿using Domain.Splats;
-using GaussianExplorer.Persistence.Data;
+using Persistence.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace Persistence.Repositories;

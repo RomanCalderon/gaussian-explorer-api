@@ -1,4 +1,4 @@
-﻿namespace GaussianExplorer.Domain.Abstractions;
+﻿namespace Domain.Abstractions;
 
 public class Result
 {

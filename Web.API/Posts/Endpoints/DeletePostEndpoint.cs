@@ -1,6 +1,6 @@
 ﻿using FastEndpoints;
-using GaussianExplorer.API.Posts;
-using GaussianExplorer.Domain.Posts;
+using API.Posts;
+using Domain.Posts;
 
 namespace Web.API.Posts.Endpoints;
 

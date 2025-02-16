@@ -1,8 +1,8 @@
 ﻿using FastEndpoints;
 using FluentValidation;
-using GaussianExplorer.Domain.Posts;
+using Domain.Posts;
 
-namespace GaussianExplorer.API.Posts.Endpoints;
+namespace API.Posts.Endpoints;
 
 public class GetPostEndpoint : EndpointWithoutRequest
 {

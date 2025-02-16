@@ -1,8 +1,9 @@
 ﻿using Domain.Splats;
-using GaussianExplorer.Domain.Abstractions;
-using GaussianExplorer.Domain.Splats.Requests;
+using Domain.Abstractions;
+using Domain.Splats.Requests;
+using API.Splats.Errors;
 
-namespace GaussianExplorer.API.Splats;
+namespace API.Splats;
 
 public sealed class SplatsService : ISplatsService
 {

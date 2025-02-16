@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace GaussianExplorer.Domain.Posts;
+namespace Domain.Posts;
 
 public sealed class PostCollection : IReadOnlyCollection<Post>
 {
@@ -8,7 +8,7 @@ public sealed class PostCollection : IReadOnlyCollection<Post>
 
     public PostCollection(IEnumerable<Post> posts)
     {
-        _posts = new(posts);
+        _posts = [.. posts];
     }
 
     #region IReadOnlyCollection implementations

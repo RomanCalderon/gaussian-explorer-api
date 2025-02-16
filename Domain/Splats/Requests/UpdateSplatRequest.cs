@@ -1,4 +1,4 @@
-﻿namespace GaussianExplorer.Domain.Splats.Requests;
+﻿namespace Domain.Splats.Requests;
 
 public sealed class UpdateSplatRequest
 {

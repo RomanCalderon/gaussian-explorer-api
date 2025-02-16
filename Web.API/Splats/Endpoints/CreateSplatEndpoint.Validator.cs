@@ -2,11 +2,11 @@
 using FastEndpoints;
 using FluentValidation;
 
-namespace Web.API.Splats.Endpoints;
+namespace API.Splats.Endpoints;
 
-public class CreateSplatEndpoint : Validator<CreateSplatRequest>
+public class CreateSplatValidator : Validator<CreateSplatRequest>
 {
-    public CreateSplatEndpoint()
+    public CreateSplatValidator()
     {
         RuleFor(x => x.UserId).GreaterThan(0);
         RuleFor(x => x.Title).NotEmpty();

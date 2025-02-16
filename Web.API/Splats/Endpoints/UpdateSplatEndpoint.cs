@@ -1,9 +1,9 @@
 ﻿using Domain.Splats;
 using FastEndpoints;
-using GaussianExplorer.API.Splats;
-using GaussianExplorer.Domain.Splats.Requests;
+using Domain.Splats.Requests;
+using API.Splats.Errors;
 
-namespace Web.API.Splats.Endpoints;
+namespace API.Splats.Endpoints;
 
 public class UpdateSplatEndpoint : Endpoint<UpdateSplatRequest>
 {

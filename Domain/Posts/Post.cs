@@ -1,4 +1,4 @@
-﻿namespace GaussianExplorer.Domain.Posts;
+﻿namespace Domain.Posts;
 
 public sealed class Post
 {

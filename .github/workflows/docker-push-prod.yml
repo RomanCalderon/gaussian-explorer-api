@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'gaussian-explorer-api/**'
   workflow_dispatch:
 
 jobs:

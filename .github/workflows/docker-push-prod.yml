@@ -32,6 +32,6 @@ jobs:
           push: true
           tags: |
             romanc647/gaussianexplorerapi:latest
-            romanc647/gaussianexplorerapi:${{ github.sha }}  # Also tag with commit hash
+            romanc647/gaussianexplorerapi:${{ github.sha }}
           cache-from: type=registry,ref=romanc647/gaussianexplorerapi:buildcache
           cache-to: type=registry,ref=romanc647/gaussianexplorerapi:buildcache,mode=max

@@ -1,4 +1,4 @@
-name: Development Docker Build and Push
+name: Docker Build and Push - Development
 
 on:
   push:
@@ -39,6 +39,6 @@ jobs:
           push: true
           tags: |
             romanc647/gaussianexplorerapi:dev
-            romanc647/gaussianexplorerapi:dev-${{ github.sha }}  # Also tag with commit hash
+            romanc647/gaussianexplorerapi:dev-${{ github.sha }}
           cache-from: type=registry,ref=romanc647/gaussianexplorerapi:buildcache-dev
           cache-to: type=registry,ref=romanc647/gaussianexplorerapi:buildcache-dev,mode=max

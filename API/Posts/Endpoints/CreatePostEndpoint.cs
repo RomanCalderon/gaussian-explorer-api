@@ -29,7 +29,10 @@ public class CreatePostEndpoint : Endpoint<CreatePostRequest>
         {
             UserId = request.UserId,
             Title = request.Title,
-            Body = request.Body
+            Body = request.Body,
+            Summary = request.Summary ?? "PLACEHOLDER GENERATED SUMMARY", // TODO: Implement summary generation
+            CreatedAt = DateTime.UtcNow,
+            UpdatedAt = DateTime.UtcNow
         };
         var createResult = await _postService.CreatePostAsync(post, ct);
 

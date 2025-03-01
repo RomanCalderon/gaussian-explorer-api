@@ -61,8 +61,10 @@ public class PostsService : IPostsService
         {
             Id = id,
             UserId = post.UserId,
-            Title = request.Title,
-            Body = request.Body
+            Title = request.Title ?? post.Title,
+            Body = request.Body ?? post.Body,
+            Summary = request.Summary ?? post.Summary,
+            UpdatedAt = DateTime.UtcNow
         };
 
         await _postsRepository.UpdateAsync(updatedPost, ct);

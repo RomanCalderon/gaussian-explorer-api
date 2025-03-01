@@ -36,7 +36,7 @@ public sealed class PostsRepository : IPostsRepository
     {
         var pagedPosts = await _context.Posts
             .AsNoTracking()
-            .OrderBy(p => p.Id)
+            .OrderByDescending(p => p.CreatedAt)
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync(ct);

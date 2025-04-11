@@ -18,6 +18,11 @@ public class UpdatePostEndpoint : Endpoint<UpdatePostRequest>
     {
         Put("/api/posts/{id}");
         AllowAnonymous();
+        Throttle(
+            hitLimit: 120,
+            durationSeconds: 60,
+            headerName: "X-Client-Id"
+        );
         Description(b => b
             .WithName("UpdatePost")
             .WithTags("Posts"));

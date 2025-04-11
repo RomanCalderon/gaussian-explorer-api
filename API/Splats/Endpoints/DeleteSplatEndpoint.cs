@@ -17,6 +17,11 @@ public class DeleteSplatEndpoint : EndpointWithoutRequest
     {
         Delete("/api/splats/{id}");
         AllowAnonymous();
+        Throttle(
+            hitLimit: 60,
+            durationSeconds: 60,
+            headerName: "X-Client-Id"
+        );
         Description(b => b
             .WithName("DeleteSplat")
             .WithTags("Splats"));

@@ -17,6 +17,11 @@ public class GetSplatsByUserEndpoint : EndpointWithoutRequest
     {
         Get("/api/splats/user/{userId}");
         AllowAnonymous();
+        Throttle(
+            hitLimit: 60,
+            durationSeconds: 60,
+            headerName: "X-Client-Id"
+        );
         Description(b => b
             .WithName("GetSplatsByUser")
             .WithTags("Splats"));

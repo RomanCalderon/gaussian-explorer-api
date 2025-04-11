@@ -18,6 +18,11 @@ public class UpdateSplatEndpoint : Endpoint<UpdateSplatRequest>
     {
         Put("/api/splats/{id}");
         AllowAnonymous();
+        Throttle(
+            hitLimit: 60,
+            durationSeconds: 60,
+            headerName: "X-Client-Id"
+        );
         Description(b => b
             .WithName("UpdateSplat")
             .WithTags("Splats"));

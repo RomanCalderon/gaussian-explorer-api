@@ -1,7 +1,7 @@
-﻿using FastEndpoints;
-using FluentValidation;
-using Domain.Posts;
+﻿using Domain.Posts;
 using Domain.Posts.Requests;
+using FastEndpoints;
+using FluentValidation;
 
 namespace API.Posts.Endpoints;
 
@@ -18,6 +18,11 @@ public class UpdatePostEndpoint : Endpoint<UpdatePostRequest>
     {
         Put("/api/posts/{id}");
         AllowAnonymous();
+        Throttle(
+            hitLimit: 120,
+            durationSeconds: 60,
+            headerName: "X-Client-Id"
+        );
         Description(b => b
             .WithName("UpdatePost")
             .WithTags("Posts"));

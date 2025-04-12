@@ -1,6 +1,6 @@
-﻿using FastEndpoints;
-using Domain.Abstractions;
+﻿using Domain.Abstractions;
 using Domain.Posts;
+using FastEndpoints;
 
 namespace API.Posts.Endpoints;
 
@@ -17,6 +17,11 @@ public class GetPostsEndpoint : EndpointWithoutRequest
     {
         Get("/api/posts");
         AllowAnonymous();
+        Throttle(
+            hitLimit: 120,
+            durationSeconds: 60,
+            headerName: "X-Client-Id"
+        );
         Description(b => b
             .WithName("GetPosts")
             .WithTags("Posts"));

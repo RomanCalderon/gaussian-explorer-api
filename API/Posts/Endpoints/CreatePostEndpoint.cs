@@ -1,6 +1,6 @@
-﻿using FastEndpoints;
-using Domain.Posts;
+﻿using Domain.Posts;
 using Domain.Posts.Requests;
+using FastEndpoints;
 
 namespace API.Posts.Endpoints;
 
@@ -17,6 +17,11 @@ public class CreatePostEndpoint : Endpoint<CreatePostRequest>
     {
         Post("/api/posts");
         AllowAnonymous();
+        Throttle(
+            hitLimit: 120,
+            durationSeconds: 60,
+            headerName: "X-Client-Id"
+        );
         Description(b => b
             .WithName("CreatePost")
             .WithTags("Posts"));
@@ -30,7 +35,7 @@ public class CreatePostEndpoint : Endpoint<CreatePostRequest>
             UserId = request.UserId,
             Title = request.Title,
             Body = request.Body,
-            Summary = request.Summary ?? "PLACEHOLDER GENERATED SUMMARY", // TODO: Implement summary generation
+            Summary = request.Summary ?? string.Empty,
             CreatedAt = DateTime.UtcNow,
             UpdatedAt = DateTime.UtcNow
         };

@@ -1,7 +1,7 @@
-﻿using Domain.Splats;
-using FastEndpoints;
+﻿using API.Splats.Errors;
+using Domain.Splats;
 using Domain.Splats.Requests;
-using API.Splats.Errors;
+using FastEndpoints;
 
 namespace API.Splats.Endpoints;
 
@@ -18,6 +18,11 @@ public class UpdateSplatEndpoint : Endpoint<UpdateSplatRequest>
     {
         Put("/api/splats/{id}");
         AllowAnonymous();
+        Throttle(
+            hitLimit: 60,
+            durationSeconds: 60,
+            headerName: "X-Client-Id"
+        );
         Description(b => b
             .WithName("UpdateSplat")
             .WithTags("Splats"));

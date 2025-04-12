@@ -1,6 +1,6 @@
-﻿using FastEndpoints;
+﻿using Domain.Posts;
+using FastEndpoints;
 using FluentValidation;
-using Domain.Posts;
 
 namespace API.Posts.Endpoints;
 

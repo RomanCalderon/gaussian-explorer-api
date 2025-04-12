@@ -1,6 +1,6 @@
-﻿using FastEndpoints;
-using Domain.Posts;
+﻿using Domain.Posts;
 using Domain.Posts.Requests;
+using FastEndpoints;
 
 namespace API.Posts.Endpoints;
 

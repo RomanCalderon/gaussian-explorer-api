@@ -1,7 +1,7 @@
-﻿using Domain.Splats;
-using FastEndpoints;
+﻿using API.Splats.Errors;
+using Domain.Splats;
 using Domain.Splats.Requests;
-using API.Splats.Errors;
+using FastEndpoints;
 
 namespace API.Splats.Endpoints;
 

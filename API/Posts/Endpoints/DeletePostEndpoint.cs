@@ -1,4 +1,4 @@
-﻿using API.Posts;
+using API.Posts;
 using Domain.Posts;
 using FastEndpoints;
 

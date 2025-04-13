@@ -1,6 +1,7 @@
 ﻿using API.Splats.Errors;
 using Domain.Splats;
 using FastEndpoints;
+using API.Splats.Errors;
 
 namespace API.Splats.Endpoints;
 

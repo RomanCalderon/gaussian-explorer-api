@@ -17,6 +17,11 @@ public class CreateSplatEndpoint : Endpoint<CreateSplatRequest>
     {
         Post("/api/splats");
         AllowAnonymous();
+        Throttle(
+            hitLimit: 60,
+            durationSeconds: 60,
+            headerName: "X-Client-Id"
+        );
         Description(b => b
             .WithName("CreateSplat")
             .WithTags("Splats"));

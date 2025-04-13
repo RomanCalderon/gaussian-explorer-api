@@ -40,6 +40,20 @@ public class ApplicationDbContext : DbContext
                 .HasColumnName("Body")
                 .HasColumnType("nvarchar(1000)")
                 .IsRequired();
+            
+            posts.Property(p => p.Summary)
+                .HasColumnName("Summary")
+                .HasColumnType("nvarchar(128)");
+
+            posts.Property(p => p.CreatedAt)
+                .HasColumnName("CreatedAt")
+                .HasColumnType("datetime2")
+                .IsRequired();
+            
+            posts.Property(p => p.UpdatedAt)
+                .HasColumnName("UpdatedAt")
+                .HasColumnType("datetime2")
+                .IsRequired();
         });
 
         modelBuilder.Entity<Splat>(splats =>

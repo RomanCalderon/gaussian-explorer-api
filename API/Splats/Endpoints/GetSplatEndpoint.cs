@@ -1,4 +1,5 @@
-﻿using Domain.Splats;
+﻿using API.Splats.Errors;
+using Domain.Splats;
 using FastEndpoints;
 using API.Splats.Errors;
 
@@ -17,6 +18,11 @@ public class GetSplatEndpoint : EndpointWithoutRequest
     {
         Get("/api/splats/{id}");
         AllowAnonymous();
+        Throttle(
+            hitLimit: 60,
+            durationSeconds: 60,
+            headerName: "X-Client-Id"
+        );
         Description(b => b
             .WithName("GetSplat")
             .WithTags("Splats"));

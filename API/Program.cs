@@ -11,7 +11,7 @@ builder.Host.UseSerilog((context, configuration) =>
     configuration.ReadFrom.Configuration(context.Configuration));
 
 builder.Services
-    .AddCorsPolicy(builder.Configuration)
+    .AddCorsPolicy(builder.Configuration, builder.Environment)
     .AddEndpoints()
     .AddPersistence(builder.Environment, builder.Configuration)
     .AddPostsService()
@@ -22,7 +22,7 @@ var app = builder.Build();
 await app.InitializeDatabaseAsync(app.Environment);
 
 app.UseGlobalErrorHandling();
-app.UseCors("default");
+app.UseCors(app.Environment.IsDevelopment() ? "development" : "production");
 app.UseMiddleware<RequestLogContextMiddleware>();
 app.UseSerilogRequestLogging();
 app.UseFastEndpoints()

@@ -14,14 +14,32 @@ namespace API;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddCorsPolicy(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddCorsPolicy(this IServiceCollection services, IConfiguration configuration, IHostEnvironment environment)
     {
-        var origins = configuration.GetRequiredSection("Cors:AllowedOrigins").Get<string[]>()
+        var corsConfig = configuration.GetSection("Cors");
+        var origins = corsConfig.GetSection("AllowedOrigins").Get<string[]>()
             ?? throw new InvalidOperationException("Allowed origins are not configured");
+        var allowAnyOrigin = corsConfig.GetValue<bool>("AllowAnyOrigin") && environment.IsDevelopment();
 
         services.AddCors(options =>
         {
-            options.AddPolicy("default", builder =>
+            options.AddPolicy("development", builder =>
+        {
+            if (allowAnyOrigin)
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            }
+            else
+            {
+                builder.WithOrigins(origins)
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            }
+        });
+
+            options.AddPolicy("production", builder =>
             {
                 builder.WithOrigins(origins)
                     .AllowAnyHeader()
